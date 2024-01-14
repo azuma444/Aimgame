@@ -2,7 +2,6 @@ import pyxel
 import random
 
 
-
 class App:
     def __init__(self):
         pyxel.init(160, 120)
@@ -31,6 +30,7 @@ class App:
         pyxel.cls(0)
         pyxel.text(0, 0, f'score {self.score}', 7)
         pyxel.text(0, 10, f'false {self.false}', 7)
+
         pyxel.circ(self.x, self.y, self.R, 8)
         if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) and self.x-self.R <= pyxel.mouse_x <= self.x+self.R and self.y-self.R <= pyxel.mouse_y <= self.y+self.R:
             pyxel.cls(0)
@@ -38,7 +38,7 @@ class App:
             self.x = random.randint(12,148)
             self.y = random.randint(12,108)
             pyxel.circ(self.x, self.y, self.R, 8)
-        elif pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) and (self.x-self.R > pyxel.mouse_x > self.x+self.R or self.y-self.R > pyxel.mouse_y > self.y+self.R):
+        elif pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) and self.x-self.R <= pyxel.mouse_x <= self.x+self.R and self.y-self.R <= pyxel.mouse_y <= self.y+self.R:
             self.false += 1
 
 App()
