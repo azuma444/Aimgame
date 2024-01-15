@@ -23,7 +23,7 @@ class App:
         elif 41 <= self.score <= 70:
             self.R = 6
         elif 71 <= self.score:
-            self.R = 3
+            self.R = 4
 
     def draw(self):
         pyxel.cls(0)
