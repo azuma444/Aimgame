@@ -1,5 +1,6 @@
 import pyxel
 import random
+#pyxelをインポートし、pyxel run program.pyで起動
 
 
 class App:
